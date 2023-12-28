@@ -1,37 +1,46 @@
-Git配置
-    （--global 全局）
-    用户名：
-        git config --global user.name 用户名 
+    Git配置
+        （--global 全局）
+        用户名：
+            git config --global user.name 用户名 
 
-    邮箱：
-        git config --global user.email 邮箱
+        邮箱：
+            git config --global user.email 邮箱
 
-    查看配置项
-        git config --list 
+        查看配置项
+            git config --list 
 
+    Git初始化仓库
+        gei init 
 
-Git初始化仓库
-    gei init 
+    Git提交代码到暂存区
+        get add 文件一，文件二 （提交文件一，文件二）
 
-Git提交代码到暂存区
-    get add 文件一，文件二 （提交文件一，文件二）
+        git add . (全区提交)
 
-    git add . (全区提交)
+    Git提交暂存区代码到本地仓库
+        git commit -m 注释
 
-Git提交暂存区代码到本地仓库
-    git commit -m 注释
+    查看Git仓库的历史版本
+        git log
 
-查看Git仓库的历史版本
-    git log
+        get log --pretty=oneline (代码显示在一行)
 
-    get log --pretty=oneline (代码显示在一行)
+    查看Git历史记录
+        git reflog
 
+    版本回退（穿梭记）
+        git reset --hard [commit]版本号 (强制回退)
 
+    将暂时未提交的变化移出，之后在移入
+        git stash 
+        git stash pop （先压后取）
+    将暂存区代码回退到工作区
+        git restore --staged 文件一 (文件一)
 
-版本回退（穿梭记）
-    git reset --hard 版本号
+    Git查看状态
+        git status (查看状态)
 
-
-
-Git查看状态
-git status (查看状态)
+分支：
+    master (发布代码)
+    dev (开发分支)
+    fixbug (bug分支 修改bug)
