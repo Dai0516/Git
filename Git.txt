@@ -44,3 +44,36 @@
     master (发布代码)
     dev (开发分支)
     fixbug (bug分支 修改bug)
+
+    列出所有分支
+        git branch   
+    新建分支
+        git branch name (分支名)
+    切换分支
+        git switch name(分支名) 
+    合并分支 （快速合并）
+        git merge name(分支名) （生成一个新的版本号）
+    删除分支
+        git branch -d name(分支名) （如果有内容则不删除）
+        git branch -D name(分支名) （暴力删除）
+
+远程库
+    查看所有远程库
+        git remote -v  
+    建立连接 
+        git remote add 库名 远程地址
+    删除数据库
+        git remote remove 库名
+本地库推送到远程库
+    git push 库名 分支名
+
+下载远程库
+    git clone 远程地址
+
+
+当协同开发的时候：
+    提交之前先拉取更新一下
+    git pull origin 分支名
+
+命令的影响范围是系统当前用户
+    git config --global http.sslverify false
