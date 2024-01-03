@@ -8,6 +8,9 @@
 
         查看配置项
             git config --list 
+        
+        命令的影响范围是系统当前用户
+            git config --global http.sslverify false
 
     Git初始化仓库
         gei init 
@@ -28,17 +31,18 @@
     查看Git历史记录
         git reflog
 
-    版本回退（穿梭记）
-        git reset --hard [commit]版本号 (强制回退)
+    临时存储
+        版本回退（穿梭记）
+            git reset --hard [commit]版本号 (强制回退)
 
-    将暂时未提交的变化移出，之后在移入
-        git stash 
-        git stash pop （先压后取）
-    将暂存区代码回退到工作区
-        git restore --staged 文件一 (文件一)
+        将暂时未提交的变化移出，之后在移入
+            git stash 
+            git stash pop （先压后取）
+        将暂存区代码回退到工作区
+            git restore --staged 文件一 (文件一)
 
-    Git查看状态
-        git status (查看状态)
+        Git查看状态
+            git status (查看状态)
 
 分支：
     master (发布代码)
@@ -48,7 +52,7 @@
     列出所有分支
         git branch   
     新建分支
-        git branch name (分支名)
+        git branch name(分支名)
     切换分支
         git switch name(分支名) 
     合并分支 （快速合并）
@@ -70,10 +74,14 @@
 下载远程库
     git clone 远程地址
 
+关联远程库(先创建本地库之后连接)
+    git branch --set-upstream-to=origin/dev dev
 
-当协同开发的时候：
+当协同开发的时候：(冲突处理)
     提交之前先拉取更新一下
-    git pull origin 分支名
+    git pull 库名 分支名
 
-命令的影响范围是系统当前用户
-    git config --global http.sslverify false
+介绍
+    README.md 
+
+.gitignore 忽略文件
